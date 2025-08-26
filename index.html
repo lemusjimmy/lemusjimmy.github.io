@@ -91,65 +91,24 @@
       <div>
         <h1>Impulso tu PyME con tecnología <span style="background:linear-gradient(45deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">simple, segura y escalable</span></h1>
         <p class="lead">Soy <strong>Jimmy Lemus</strong>, consultor en TI en <strong>Icononzo, Tolima</strong>. Diseñamos e implementamos <em>infraestructura moderna</em>, <em>nube</em> y <em>ciberseguridad</em> para que tu negocio crezca sin fricción.</p>
+        <p class="lead"><em>Aunque no vivo en la capital, brindo soluciones TI de calidad profesional a cualquier PyME en Colombia.</em></p>
         <div style="display:flex;gap:.8rem;flex-wrap:wrap">
           <a class="btn primary" href="#contacto">Agendar reunión gratuita</a>
           <a class="btn" href="#servicios">Ver servicios</a>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.3rem">
-          <div class="hero-card kpi"><span>⚡</span><div><strong>+99.9% Uptime</strong><div class="muted">Infraestructura confiable</div></div></div>
-          <div class="hero-card kpi"><span>🔐</span><div><strong>Seguridad primero</strong><div class="muted">Backups y protección 24/7</div></div></div>
-          <div class="hero-card kpi"><span>🤝</span><div><strong>Soporte cercano</strong><div class="muted">SLA claros y humanos</div></div></div>
-        </div>
-      </div>
-      <div>
-        <div class="grid cards" style="grid-template-columns:1fr 1fr">
-          <div class="service">
-            <h3>🔧 Infraestructura</h3>
-            <p>Redes, servidores, virtualización, Wi‑Fi empresarial y continuidad operativa.</p>
-          </div>
-          <div class="service">
-            <h3>☁️ Nube</h3>
-            <p>Migraciones a Microsoft 365/Google Workspace, backups cloud y automatización.</p>
-          </div>
-          <div class="service">
-            <h3>🛡️ Ciberseguridad</h3>
-            <p>End‑point, firewall, copias 3‑2‑1, auditorías y capacitación anti‑phishing.</p>
-          </div>
-          <div class="service">
-            <h3>🧑‍💻 Soporte & Help Desk</h3>
-            <p>Planes gestionados con SLA, inventario y monitoreo proactivo.</p>
-          </div>
-        </div>
       </div>
     </section>
-
-    <!-- resto sin cambios relevantes hasta contacto -->
 
     <section id="contacto">
       <div class="container">
         <div class="cta">
           <h2>¿Listo para modernizar tu TI?</h2>
-          <p class="sub">Agenda una llamada de descubrimiento y recibe recomendaciones concretas en 48 horas.</p>
-          <form id="form" class="grid" style="width:min(760px,100%);grid-template-columns:1fr 1fr;gap:1rem">
-            <input required name="nombre" placeholder="Tu nombre" style="padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)" />
-            <input required type="email" name="email" placeholder="Tu correo" value="lemusjimmy87@gmail.com" style="padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)" />
-            <input name="telefono" placeholder="Teléfono" value="3125499679" style="padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)" />
-            <input name="empresa" placeholder="Empresa" style="padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)" />
-            <select name="tamaño" style="padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)">
-              <option value="">Tamaño de empresa</option>
-              <option>1–10</option>
-              <option>11–50</option>
-              <option>51–100</option>
-              <option>101–250</option>
-            </select>
-            <textarea name="mensaje" placeholder="Cuéntame tu reto (opcional)" rows="4" style="grid-column:1/-1;padding:.9rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.2);color:var(--text)"></textarea>
-            <button class="btn primary" style="justify-content:center">Enviar</button>
-          </form>
-          <div id="msg" class="muted" style="margin-top:.6rem"></div>
-          <div style="margin-top:1rem;color:var(--text)">
+          <p class="sub">Contáctame directamente y recibe recomendaciones concretas en 48 horas.</p>
+          <div style="margin-top:1rem;color:var(--text);text-align:left">
             <div><strong>Email:</strong> <a href="mailto:lemusjimmy87@gmail.com">lemusjimmy87@gmail.com</a></div>
             <div><strong>Teléfono:</strong> <a href="tel:+573125499679">3125499679</a></div>
             <div><strong>Ubicación:</strong> Icononzo, Tolima</div>
+            <div><em>Aunque no vivo en la capital, brindo soluciones TI de calidad profesional a cualquier PyME en Colombia.</em></div>
           </div>
         </div>
       </div>
@@ -162,6 +121,7 @@
         <strong>Jimmy Lemus</strong>
         <div class="muted">Consultor en Soluciones TI para Pequeñas y Medianas Empresas en Icononzo, Tolima</div>
         <div class="muted">Contacto: lemusjimmy87@gmail.com | 3125499679</div>
+        <div class="muted"><em>Aunque no vivo en la capital, brindo soluciones TI de calidad profesional a cualquier PyME en Colombia.</em></div>
       </div>
       <div style="justify-self:end">
         <div class="social">
@@ -172,16 +132,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const form = document.querySelector('#form');
-    const msg = document.querySelector('#msg');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      msg.textContent = '¡Gracias, ' + (data.nombre||'') + '! He recibido tu mensaje y te contactaré a la brevedad.';
-      form.reset();
-    })
-  </script>
 </body>
 </html>
