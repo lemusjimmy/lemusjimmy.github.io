@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Jimmy Lemus",
+    "subtitle": "Especialista en Soluciones TI y Transformación Digital con un enfoque sencillo, funcional y adaptado a las PyMEs."
+  },
+  "servicios": [
+    "Soluciones TI adaptadas a la realidad de las PyMEs.",
+    "Transformación Digital como ventaja competitiva.",
+    "Orientación en infraestructura tecnológica y soporte.",
+    "Buenas prácticas en seguridad informática."
+  ],
+  "sectores": [
+    "Comercio y servicios",
+    "Educación y capacitación",
+    "Pequeña industria y manufactura"
+  ],
+  "proceso": [
+    "Escuchar las necesidades de la empresa",
+    "Proponer soluciones sencillas y efectivas",
+    "Acompañar la implementación paso a paso",
+    "Dar soporte y seguimiento para asegurar resultados"
+  ]
+}
