@@ -5,104 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jimmy Lemus - Soluciones TI</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin:0;
-      padding:0;
-      line-height:1.6;
-      color:#222;
-      background:#fdfdfd;
-    }
-    header {
-      position: relative;
-      background: linear-gradient(135deg, #2c3e50, #34495e);
-      color:#fff;
-      padding:3rem 1rem;
-      text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2);
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 60%),
-                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 60%);
-      animation: moveLights 12s infinite alternate;
-      z-index:0;
-    }
-    @keyframes moveLights {
-      0% { background-position: 0% 0%, 100% 100%; }
-      100% { background-position: 100% 100%, 0% 0%; }
-    }
-    header h1, header p {
-      position: relative;
-      z-index:1;
-    }
-    nav {
-      background:#ffffff;
-      padding:0.8rem;
-      text-align:center;
-      border-bottom:1px solid #e5e5e5;
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    nav a {
-      color:#2c3e50;
-      margin:0 1rem;
-      text-decoration:none;
-      font-weight:500;
-      font-size:0.95rem;
-      transition:color 0.3s;
-    }
-    nav a:hover {
-      color:#2980b9;
-    }
-    section {
-      padding:3rem 1.5rem;
-      max-width:900px;
-      margin:auto;
-      background:#fff;
-      margin-top:2rem;
-      border-radius:8px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-      transition:transform 0.3s;
-    }
-    section:hover {
-      transform:translateY(-3px);
-    }
-    h1, h2 {
-      color:#2c3e50;
-      font-weight:600;
-    }
-    h1 {font-size:2.2rem;}
-    h2 {margin-bottom:1rem;}
-    p.lead {
-      font-size:1.2rem;
-      color:#ecf0f1;
-    }
-    ul, ol {
-      color:#444;
-    }
-    footer {
-      background:#2c3e50;
-      color:#ecf0f1;
-      text-align:center;
-      padding:2rem 1rem;
-      margin-top:3rem;
-      font-size:0.9rem;
-    }
-    .sub {color:#555; font-size:1rem; margin-bottom:1rem;}
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; line-height:1.6; color:#222; background:#fdfdfd; }
+    header { position: relative; background: linear-gradient(135deg, #2c3e50, #34495e); color:#fff; padding:3rem 1rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.2); overflow: hidden; }
+    header h1, header p { position: relative; z-index:1; }
+    nav { background:#ffffff; padding:0.8rem; text-align:center; border-bottom:1px solid #e5e5e5; position:sticky; top:0; z-index:100; }
+    nav a { color:#2c3e50; margin:0 1rem; text-decoration:none; font-weight:500; font-size:0.95rem; transition:color 0.3s; }
+    nav a:hover { color:#2980b9; }
+    section { padding:3rem 1.5rem; max-width:900px; margin:auto; background:#fff; margin-top:2rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:transform 0.3s; }
+    section:hover { transform:translateY(-3px); }
+    h1, h2 { color:#2c3e50; font-weight:600; }
+    footer { background:#2c3e50; color:#ecf0f1; text-align:center; padding:2rem 1rem; margin-top:3rem; font-size:0.9rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Jimmy Lemus</h1>
-    <p class="lead">Especialista en Soluciones TI y Transformación Digital con un enfoque sencillo, funcional y adaptado a las PyMEs.</p>
+    <h1 id="header-title">Cargando...</h1>
+    <p id="header-subtitle">Por favor espera...</p>
   </header>
 
   <nav>
@@ -114,39 +33,21 @@
 
   <section id="servicios">
     <h2>Servicios</h2>
-    <p class="sub">Acompaño a las PyMEs en el uso estratégico de la tecnología:</p>
-    <ul>
-      <li>Soluciones TI adaptadas a la realidad de las PyMEs.</li>
-      <li>Transformación Digital como ventaja competitiva.</li>
-      <li>Orientación en infraestructura tecnológica y soporte.</li>
-      <li>Buenas prácticas en seguridad informática.</li>
-    </ul>
+    <ul id="servicios-list"><li>Cargando...</li></ul>
   </section>
 
   <section id="sectores">
     <h2>Sectores</h2>
-    <p class="sub">Experiencia con empresas de distintos ámbitos:</p>
-    <ul>
-      <li>Comercio y servicios.</li>
-      <li>Educación y capacitación.</li>
-      <li>Pequeña industria y manufactura.</li>
-    </ul>
+    <ul id="sectores-list"><li>Cargando...</li></ul>
   </section>
 
   <section id="proceso">
     <h2>Proceso</h2>
-    <p class="sub">Metodología clara y enfocada en resultados:</p>
-    <ol>
-      <li>Escuchar las necesidades de la empresa.</li>
-      <li>Proponer soluciones sencillas y efectivas.</li>
-      <li>Acompañar la implementación paso a paso.</li>
-      <li>Dar soporte y seguimiento para asegurar resultados.</li>
-    </ol>
+    <ol id="proceso-list"><li>Cargando...</li></ol>
   </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>Puedes comunicarte conmigo a través de:</p>
     <ul>
       <li><strong>Email:</strong> lemusjimmy87@gmail.com</li>
       <li><strong>Teléfono:</strong> 3125499679</li>
@@ -157,5 +58,45 @@
   <footer>
     <p>Jimmy Lemus - Soluciones TI y Transformación Digital</p>
   </footer>
+
+  <script>
+    fetch("data/content.json")
+      .then(res => res.json())
+      .then(data => {
+        // Header
+        document.getElementById("header-title").textContent = data.header.title;
+        document.getElementById("header-subtitle").textContent = data.header.subtitle;
+
+        // Servicios
+        const serviciosList = document.getElementById("servicios-list");
+        serviciosList.innerHTML = "";
+        data.servicios.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          serviciosList.appendChild(li);
+        });
+
+        // Sectores
+        const sectoresList = document.getElementById("sectores-list");
+        sectoresList.innerHTML = "";
+        data.sectores.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          sectoresList.appendChild(li);
+        });
+
+        // Proceso
+        const procesoList = document.getElementById("proceso-list");
+        procesoList.innerHTML = "";
+        data.proceso.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          procesoList.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error("Error cargando contenido dinámico:", err);
+      });
+  </script>
 </body>
 </html>
