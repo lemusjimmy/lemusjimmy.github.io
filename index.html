@@ -35,27 +35,10 @@
   </header>
 
   <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#sectores">Sectores</a>
-    <a href="#proceso">Proceso</a>
     <a href="#contacto">Contacto</a>
     <a href="#blog">Blog</a>
   </nav>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <ul id="servicios-list"><li>Cargando...</li></ul>
-  </section>
-
-  <section id="sectores">
-    <h2>Sectores</h2>
-    <ul id="sectores-list"><li>Cargando...</li></ul>
-  </section>
-
-  <section id="proceso">
-    <h2>Proceso</h2>
-    <ol id="proceso-list"><li>Cargando...</li></ol>
-  </section>
   <section id="blog">
     <h2>Blog</h2>
     <ul id="blog-list"><li>Cargando...</li></ul>
@@ -81,32 +64,7 @@
         document.getElementById("header-title").textContent = data.header.title;
         document.getElementById("header-subtitle").textContent = data.header.subtitle;
 
-        // Servicios
-        const serviciosList = document.getElementById("servicios-list");
-        serviciosList.innerHTML = "";
-        data.servicios.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          serviciosList.appendChild(li);
-        });
 
-        // Sectores
-        const sectoresList = document.getElementById("sectores-list");
-        sectoresList.innerHTML = "";
-        data.sectores.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          sectoresList.appendChild(li);
-        });
-
-        // Proceso
-        const procesoList = document.getElementById("proceso-list");
-        procesoList.innerHTML = "";
-        data.proceso.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = item;
-          procesoList.appendChild(li);
-        });
       })
       .catch(err => {
         console.error("Error cargando contenido dinámico:", err);
