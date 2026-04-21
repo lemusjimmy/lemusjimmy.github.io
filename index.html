@@ -29,6 +29,7 @@
     <a href="#sectores">Sectores</a>
     <a href="#proceso">Proceso</a>
     <a href="#contacto">Contacto</a>
+    <a href="#blog">Blog</a>
   </nav>
 
   <section id="servicios">
@@ -45,7 +46,10 @@
     <h2>Proceso</h2>
     <ol id="proceso-list"><li>Cargando...</li></ol>
   </section>
-
+  <section id="blog">
+    <h2>Blog</h2>
+    <ul id="blog-list"><li>Cargando...</li></ul>
+  </section>
   <section id="contacto">
     <h2>Contacto</h2>
     <ul>
@@ -96,6 +100,25 @@
       })
       .catch(err => {
         console.error("Error cargando contenido dinámico:", err);
+      });
+  </script>
+  <script>
+    fetch("data/blog-ssoo.json")
+      .then(res => res.json())
+      .then(data => {
+        const blogList = document.getElementById("blog-list");
+        blogList.innerHTML = "";
+        const li = document.createElement("li");
+        const title = document.createElement("h3");
+        title.textContent = data.title;
+        const body = document.createElement("p");
+        body.textContent = data.body;
+        li.appendChild(title);
+        li.appendChild(body);
+        blogList.appendChild(li);
+      })
+      .catch(err => {
+        console.error("Error cargando contenido del blog:", err);
       });
   </script>
 </body>
