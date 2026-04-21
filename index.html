@@ -14,6 +14,16 @@
     nav a:hover { color:#2980b9; }
     section { padding:3rem 1.5rem; max-width:900px; margin:auto; background:#fff; margin-top:2rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:transform 0.3s; }
     section:hover { transform:translateY(-3px); }
+    #blog-list { list-style:none; padding:0; margin:0; display:grid; gap:1rem; }
+    #blog-list li { margin:0; }
+    .blog-card { background:#ffffff; border:1px solid rgba(46, 68, 88, 0.12); border-radius:14px; padding:1.4rem 1.6rem; box-shadow:0 9px 20px rgba(46,68,88,0.08); transition:transform 0.25s ease, box-shadow 0.25s ease; }
+    .blog-card:hover { transform:translateY(-3px); box-shadow:0 14px 28px rgba(46,68,88,0.12); }
+    .blog-card h3 { margin:0 0 0.5rem; color:#1c2b3c; font-size:1.2rem; }
+    .blog-meta { display:flex; flex-wrap:wrap; gap:0.5rem 1rem; margin:0 0 1rem; font-size:0.9rem; color:#65738a; }
+    .blog-meta span { display:inline-flex; align-items:center; }
+    .blog-meta span::before { content:'•'; margin-right:0.5rem; color:#cbd5dc; }
+    .blog-meta span:first-child::before { content:''; margin-right:0; }
+    .blog-card p { margin:0; color:#4b5868; line-height:1.75; }
     h1, h2 { color:#2c3e50; font-weight:600; }
     footer { background:#2c3e50; color:#ecf0f1; text-align:center; padding:2rem 1rem; margin-top:3rem; font-size:0.9rem; }
   </style>
@@ -108,14 +118,35 @@
       .then(data => {
         const blogList = document.getElementById("blog-list");
         blogList.innerHTML = "";
-        const li = document.createElement("li");
-        const title = document.createElement("h3");
-        title.textContent = data.title;
-        const body = document.createElement("p");
-        body.textContent = data.body;
-        li.appendChild(title);
-        li.appendChild(body);
-        blogList.appendChild(li);
+        const entries = Array.isArray(data) ? data : [data];
+
+        entries.forEach(post => {
+          const li = document.createElement("li");
+          const card = document.createElement("article");
+          card.className = "blog-card";
+
+          const title = document.createElement("h3");
+          title.textContent = post.title || "Artículo del blog";
+
+          const meta = document.createElement("div");
+          meta.className = "blog-meta";
+          const author = document.createElement("span");
+          author.textContent = post.author || "Autor desconocido";
+          const published = document.createElement("span");
+          published.textContent = post.published || "Fecha no disponible";
+
+          meta.appendChild(author);
+          meta.appendChild(published);
+
+          const body = document.createElement("p");
+          body.textContent = post.body || "Resumen no disponible.";
+
+          card.appendChild(title);
+          card.appendChild(meta);
+          card.appendChild(body);
+          li.appendChild(card);
+          blogList.appendChild(li);
+        });
       })
       .catch(err => {
         console.error("Error cargando contenido del blog:", err);
