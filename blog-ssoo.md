@@ -1,0 +1,18 @@
+# Sistemas Operativos: De Mascotas a Servicios
+_Escrito por Jimmy Lemus_ 
+
+_Abril de 2026_
+
+Los sistemas operativos son la base de cualquier sistema, sin ellos no podriamos interactuar con el hardware y va mucho mas alla si tenemos en cuenta que la sofisticacion de la tecnologia crea sistemas cada vez mas complejos, un reloj, un telefono, un enrutador, un conmutador de red, un cortafuegos, un automovil, un servidor de base de datos, de intenrnet, de procesamiento, etc. Dependen del sistema operativo para funcionar.
+
+Es importante hacer un alto en el camino y mirar atrás. Basta con observar el estado del arte respecto a los sistemas operativos para darnos cuenta de que estamos frente a un cambio de paradigma. Como administradores de sistemas operativos, debemos ser conscientes de que han llegado nuevas tecnologías y que no son pasajeras: han llegado para quedarse.
+
+Naturalmente, todo inicia en el sistema operativo. Puede verse como la base sobre la cual todo comenzó. Aprendimos su funcionamiento y complejidad, así como su versatilidad y capacidad de adaptación a cualquier situación. 
+
+Sin embargo, el avance tecnológico es muy rápido en comparación con la curva de aprendizaje, una curva que cuesta adquirir y que solemos valorar una vez la hemos alcanzado. Como seres humanos, tendemos a acostumbrarnos a aquello que conocemos y a valorarlo precisamente por esa familiaridad. Al parecer ha ocurrido con los sistemas operativos: se han instaurado en las áreas de TI como si fuesen una mascota, una mascota que requiere dinero para su manutención, pero también atención constante y muchas horas de trabajo.
+
+Esto genera dependencias importantes respecto al personal técnico que los mantiene, quienes realmente conocen las particularidades del sistema operativo y, por tanto, son los únicos capaces de solventar rápidamente un fallo cuando ocurre. Una verdad que debemos tener en cuenta es que ya no deberíamos pensar en el sistema operativo en sí, sino en el servicio que este presta. Llegamos al sistema operativo con el objetivo de ejecutar un servicio, pero el propio sistema operativo terminó capturando toda nuestra atención.
+Los sistemas operativos, por su naturaleza, tienden a perdurar en el tiempo y a modificarse de forma progresiva. Se ajustan a nuevas necesidades, se instalan y desinstalan programas, se crean usuarios y grupos para propósitos específicos que luego no se depuran. Por razones culturales y prácticas, poco a poco el sistema se va alterando y alejando de su estado inicial.
+Un posible enfoque sería tratar de mantener el sistema operativo siempre igual, apoyándose en tareas automáticas de depuración frecuentes que eliminen acciones pasajeras. También es posible crear imágenes específicas que permitan reconstruir un sistema operativo en caso de daño. Reconstruir en lugar de reparar.
+Debemos pasar de solucionar, mantener y desplegar manualmente a hacer que las cosas sucedan de forma automática. Si un servicio falla, debería ser capaz de recuperarse o restablecerse por sí mismo para volver a operar. Pasemos de mantener un servicio funcionando a diseñar servicios que funcionen incluso cuando no estamos presentes.
+Pasemos de ser propietarios de servidores a diseñadores de servicios; de saber cómo arreglar un sistema a ser creadores de automatizaciones; de ser expertos en servidores a convertirnos en arquitectos de resiliencia."

@@ -71,9 +71,35 @@
       });
   </script>
   <script>
-    fetch("data/blog-ssoo.json")
-      .then(res => res.json())
-      .then(data => {
+    fetch("blog-ssoo.md")
+      .then(res => res.text())
+      .then(markdown => {
+        // Parse markdown for title, author, published, body
+        const lines = markdown.split('\n');
+        let title = lines[0].replace(/^# /, '');
+        let author = "Autor desconocido";
+        let published = "Fecha no disponible";
+        let bodyStart = 1;
+
+        if (lines[1] && lines[1].startsWith('_Escrito por ')) {
+          author = lines[1].replace(/_Escrito por /, '').replace(/_$/, '');
+          bodyStart = 2;
+        }
+
+        if (lines[2] && lines[2].startsWith('_Abril de ')) {
+          published = lines[2].replace(/^_/, '').replace(/_$/, '');
+          bodyStart = 3;
+        }
+
+        const body = lines.slice(bodyStart).join('\n').trim();
+
+        const data = {
+          title: title,
+          author: author,
+          published: published,
+          body: body
+        };
+
         const blogList = document.getElementById("blog-list");
         blogList.innerHTML = "";
         const entries = Array.isArray(data) ? data : [data];
