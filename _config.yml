@@ -1,0 +1,3 @@
+# Keep the .md files in content/ and data/blog/ as plain files; the site reads and renders them in the browser.
+optional_front_matter:
+  enabled: false

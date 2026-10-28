@@ -54,7 +54,7 @@
 
   fetch(index)
     .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
-    .then(names => Promise.all(names.map(name =>
+    .then(names => Promise.all(names.filter(Boolean).sort().reverse().map(name =>
       fetch(dir + encodeURIComponent(name))
         .then(res => { if (!res.ok) throw new Error(name + ': ' + res.status); return res.text(); })
         .then(buildPost)
