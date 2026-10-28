@@ -3,7 +3,7 @@ _Escrito por Jimmy Lemus_
 
 _Abril de 2026_
 
-Los sistemas operativos son la base de cualquier sistema, sin ellos no podriamos interactuar con el hardware y va mucho mas alla si tenemos en cuenta que la sofisticacion de la tecnologia crea sistemas cada vez mas complejos, un reloj, un telefono, un enrutador, un conmutador de red, un cortafuegos, un automovil, un servidor de base de datos, de intenrnet, de procesamiento, etc. Dependen del sistema operativo para funcionar.
+Los sistemas operativos son la base de cualquier sistema, sin ellos no podríamos interactuar con el hardware y va mucho más allá si tenemos en cuenta que la sofisticación de la tecnología crea sistemas cada vez mas complejos, un reloj, un teléfono, un enrutador, un conmutador de red, un cortafuegos, un automovil, un servidor de base de datos, de internet, de procesamiento, etc. Dependen del sistema operativo para funcionar.
 
 Es importante hacer un alto en el camino y mirar atrás. Basta con observar el estado del arte respecto a los sistemas operativos para darnos cuenta de que estamos frente a un cambio de paradigma. Como administradores de sistemas operativos, debemos ser conscientes de que han llegado nuevas tecnologías y que no son pasajeras: han llegado para quedarse.
 

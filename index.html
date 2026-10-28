@@ -3,138 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jimmy Lemus - Soluciones TI</title>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; line-height:1.6; color:#222; background:#fdfdfd; }
-    header { position: relative; background: linear-gradient(135deg, #2c3e50, #34495e); color:#fff; padding:3rem 1rem; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.2); overflow: hidden; }
-    header h1, header p { position: relative; z-index:1; }
-    nav { background:#ffffff; padding:0.8rem; text-align:center; border-bottom:1px solid #e5e5e5; position:sticky; top:0; z-index:100; }
-    nav a { color:#2c3e50; margin:0 1rem; text-decoration:none; font-weight:500; font-size:0.95rem; transition:color 0.3s; }
-    nav a:hover { color:#2980b9; }
-    section { padding:3rem 1.5rem; max-width:900px; margin:auto; background:#fff; margin-top:2rem; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:transform 0.3s; }
-    section:hover { transform:translateY(-3px); }
-    #blog-list { list-style:none; padding:0; margin:0; display:grid; gap:1rem; }
-    #blog-list li { margin:0; }
-    .blog-card { background:#ffffff; border:1px solid rgba(46, 68, 88, 0.12); border-radius:14px; padding:1.4rem 1.6rem; box-shadow:0 9px 20px rgba(46,68,88,0.08); transition:transform 0.25s ease, box-shadow 0.25s ease; }
-    .blog-card:hover { transform:translateY(-3px); box-shadow:0 14px 28px rgba(46,68,88,0.12); }
-    .blog-card h3 { margin:0 0 0.5rem; color:#1c2b3c; font-size:1.2rem; }
-    .blog-meta { display:flex; flex-wrap:wrap; gap:0.5rem 1rem; margin:0 0 1rem; font-size:0.9rem; color:#65738a; }
-    .blog-meta span { display:inline-flex; align-items:center; }
-    .blog-meta span::before { content:'•'; margin-right:0.5rem; color:#cbd5dc; }
-    .blog-meta span:first-child::before { content:''; margin-right:0; }
-    .blog-card p { margin:0; color:#4b5868; line-height:1.75; }
-    h1, h2 { color:#2c3e50; font-weight:600; }
-    footer { background:#2c3e50; color:#ecf0f1; text-align:center; padding:2rem 1rem; margin-top:3rem; font-size:0.9rem; }
-  </style>
+  <title>Jimmy Lemus | Administrador de nubes públicas</title>
+  <meta name="description" content="Jimmy Lemus, administrador de nubes públicas (Azure, GCP y OCI). Diseño servicios resilientes y automatizados que siguen funcionando aunque yo no esté.">
+  <link rel="canonical" href="https://lemusjimmy.github.io/">
+  <link rel="alternate" hreflang="es" href="https://lemusjimmy.github.io/">
+  <link rel="alternate" hreflang="en" href="https://lemusjimmy.github.io/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jimmy Lemus | Administrador de nubes públicas">
+  <meta property="og:description" content="Azure, GCP y OCI. Servicios resilientes, automatizados y diseñados para funcionar sin intervención constante.">
+  <meta property="og:url" content="https://lemusjimmy.github.io/">
+  <meta property="og:locale" content="es_CO">
+  <meta name="theme-color" content="#1d2a38">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jimmy Eduardo Lemus Ávila",
+    "jobTitle": "Administrador de nubes públicas",
+    "worksFor": { "@type": "Organization", "name": "Telefónica Tech" },
+    "url": "https://lemusjimmy.github.io/",
+    "email": "mailto:lemusjimmy87@gmail.com",
+    "address": { "@type": "PostalAddress", "addressRegion": "Tolima", "addressCountry": "CO" },
+    "sameAs": [
+      "https://www.linkedin.com/in/jimmy-lemus-%C3%A1vila-b3945311a/",
+      "https://github.com/lemusjimmy"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <h1 id="header-title">Cargando...</h1>
-    <p id="header-subtitle">Por favor espera...</p>
-  </header>
-
-  <nav>
-    <a href="#contacto">Contacto</a>
-    <a href="#blog">Blog</a>
+  <nav class="topnav" aria-label="Principal">
+    <div class="wrap">
+      <div class="links"></div>
+      <a class="lang" href="en/" hreflang="en" lang="en">English</a>
+    </div>
   </nav>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <ul id="blog-list"><li>Cargando...</li></ul>
-  </section>
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <ul>
-      <li><strong>Email:</strong> lemusjimmy87@gmail.com</li>
-      <li><strong>Teléfono:</strong> 3125499679</li>
-      <li><strong>Ubicación:</strong> Icononzo, Tolima</li>
-    </ul>
-  </section>
+  <header class="hero" data-md="content/es/hero.md" data-layout="hero">
+    <div class="wrap">
+      <div class="hero-text"></div>
+      <!-- Para tu foto: guarda el archivo como assets/jimmy.jpg. Mientras no exista se muestran las iniciales. -->
+      <div class="avatar" aria-label="Jimmy Lemus">
+        JL
+        <img src="assets/jimmy.jpg" alt="Retrato de Jimmy Lemus" onerror="this.remove()">
+      </div>
+    </div>
+  </header>
 
-  <footer>
-    <p>Jimmy Lemus - Soluciones TI y Transformación Digital</p>
+  <main class="wrap">
+    <section id="sobre-mi" data-md="content/es/sobre-mi.md"></section>
+
+    <section id="que-hago" data-md="content/es/que-hago.md" data-layout="cards"></section>
+
+    <section id="certificaciones" data-md="content/es/certificaciones.md" data-layout="certs"></section>
+
+    <section id="trayectoria" data-md="content/es/trayectoria.md" data-layout="timeline"></section>
+
+    <section id="contacto" data-md="content/es/contacto.md"></section>
+
+    <section id="blog" data-md="content/es/blog.md">
+      <div id="blog-list" class="posts"
+           data-index="data/blog/index.json" data-dir="data/blog/"
+           data-read-more="Leer artículo completo"
+           data-read-less="Ocultar"
+           data-error="No se pudo cargar el artículo."></div>
+    </section>
+  </main>
+
+  <footer data-md="content/es/pie.md" data-layout="footer">
+    <div class="wrap"></div>
   </footer>
+  <noscript><p class="wrap">Esta página necesita JavaScript para mostrar su contenido.</p></noscript>
 
-  <script>
-    fetch("data/content.json")
-      .then(res => res.json())
-      .then(data => {
-        // Header
-        document.getElementById("header-title").textContent = data.header.title;
-        document.getElementById("header-subtitle").textContent = data.header.subtitle;
-
-
-      })
-      .catch(err => {
-        console.error("Error cargando contenido dinámico:", err);
-      });
-  </script>
-  <script>
-    fetch("blog-ssoo.md")
-      .then(res => res.text())
-      .then(markdown => {
-        // Parse markdown for title, author, published, body
-        const lines = markdown.split('\n');
-        let title = lines[0].replace(/^# /, '');
-        let author = "Autor desconocido";
-        let published = "Fecha no disponible";
-        let bodyStart = 1;
-
-        if (lines[1] && lines[1].startsWith('_Escrito por ')) {
-          author = lines[1].replace(/_Escrito por /, '').replace(/_$/, '');
-          bodyStart = 2;
-        }
-
-        if (lines[2] && lines[2].startsWith('_Abril de ')) {
-          published = lines[2].replace(/^_/, '').replace(/_$/, '');
-          bodyStart = 3;
-        }
-
-        const body = lines.slice(bodyStart).join('\n').trim();
-
-        const data = {
-          title: title,
-          author: author,
-          published: published,
-          body: body
-        };
-
-        const blogList = document.getElementById("blog-list");
-        blogList.innerHTML = "";
-        const entries = Array.isArray(data) ? data : [data];
-
-        entries.forEach(post => {
-          const li = document.createElement("li");
-          const card = document.createElement("article");
-          card.className = "blog-card";
-
-          const title = document.createElement("h3");
-          title.textContent = post.title || "Artículo del blog";
-
-          const meta = document.createElement("div");
-          meta.className = "blog-meta";
-          const author = document.createElement("span");
-          author.textContent = post.author || "Autor desconocido";
-          const published = document.createElement("span");
-          published.textContent = post.published || "Fecha no disponible";
-
-          meta.appendChild(author);
-          meta.appendChild(published);
-
-          const body = document.createElement("p");
-          body.textContent = post.body || "Resumen no disponible.";
-
-          card.appendChild(title);
-          card.appendChild(meta);
-          card.appendChild(body);
-          li.appendChild(card);
-          blogList.appendChild(li);
-        });
-      })
-      .catch(err => {
-        console.error("Error cargando contenido del blog:", err);
-      });
-  </script>
+  <script src="js/site.js"></script>
+  <script src="js/blog.js"></script>
 </body>
 </html>
