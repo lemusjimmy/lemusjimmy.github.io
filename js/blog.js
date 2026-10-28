@@ -12,7 +12,49 @@
 
   const makeP = text => { const p = document.createElement('p'); p.textContent = text; return p; };
 
-  function buildPost(markdown) {
+  // Reactions and comments (Giscus, backed by GitHub Discussions). One thread per post,
+  // keyed by the file name, so the Spanish and English pages share it.
+  const GISCUS = {
+    'data-repo': 'lemusjimmy/lemusjimmy.github.io',
+    'data-repo-id': 'R_kgDOPZb8jA',
+    'data-category': 'blog',
+    'data-category-id': 'DIC_kwDOPZb8jM4DJ1M5',
+    'data-mapping': 'specific',
+    'data-strict': '1',
+    'data-reactions-enabled': '1',
+    'data-emit-metadata': '0',
+    'data-input-position': 'top',
+    'data-theme': 'preferred_color_scheme',
+    'data-lang': document.documentElement.lang === 'en' ? 'en' : 'es',
+    'data-loading': 'lazy',
+  };
+
+  function addReactions(article, name) {
+    const box = document.createElement('div');
+    box.className = 'comments';
+    article.append(box);
+
+    const load = () => {
+      const s = document.createElement('script');
+      s.src = 'https://giscus.app/client.js';
+      s.async = true;
+      s.crossOrigin = 'anonymous';
+      Object.entries(GISCUS).forEach(([k, v]) => s.setAttribute(k, v));
+      s.setAttribute('data-term', name.replace(/\.md$/, ''));
+      box.append(s);
+    };
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) { io.disconnect(); load(); }
+      }, { rootMargin: '300px' });
+      io.observe(box);
+    } else {
+      load();
+    }
+  }
+
+  function buildPost(markdown, name) {
     const lines = markdown.split('\n').map(l => l.trim()).filter(Boolean);
     const title = (lines.shift() || '').replace(/^#\s*/, '').replace(/[:\s]+$/, '');
     const meta = [];
@@ -49,6 +91,7 @@
       });
       article.append(details);
     }
+    addReactions(article, name);
     return article;
   }
 
@@ -57,7 +100,7 @@
     .then(names => Promise.all(names.filter(Boolean).sort().reverse().map(name =>
       fetch(dir + encodeURIComponent(name))
         .then(res => { if (!res.ok) throw new Error(name + ': ' + res.status); return res.text(); })
-        .then(buildPost)
+        .then(markdown => buildPost(markdown, name))
     )))
     .then(posts => {
       if (!posts.length) { container.textContent = empty; return; }
